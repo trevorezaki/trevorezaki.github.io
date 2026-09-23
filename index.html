@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trevor Ezaki — Product Designer</title>
+<title>[Your Name] — Product Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Archivo:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
@@ -27,16 +27,16 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit; text-decoration:none;}
-  .wrap{max-width:980px; margin:0 auto; padding:0 28px;}
+  .wrap{max-width:980px; margin:0 auto; padding:0 32px;}
 
-  nav{padding:30px 0;}
+  nav{padding:32px 0;}
   nav .wrap{display:flex; justify-content:space-between; align-items:center;}
   .nav-name{font-family:'Fraunces', serif; font-weight:700; font-size:19px;}
   .nav-links{display:flex; gap:8px; font-size:14px; font-weight:600;}
   .nav-links a{padding:8px 16px; border-radius:100px;}
   .nav-links a:hover{background:var(--soft);}
 
-  header.hero{padding:64px 0 60px;}
+  header.hero{padding:64px 0 56px;}
   h1{
     font-family:'Fraunces', serif;
     font-weight:700;
@@ -50,16 +50,16 @@
   h1 .c2{color:var(--coral);}
   h1 .c3{color:var(--coral);}
   h1 .c4{color:var(--coral);}
-  .hero-sub{margin-top:26px; font-size:18px; color:var(--ink-soft); max-width:560px;}
+  .hero-sub{margin-top:24px; font-size:18px; color:var(--ink-soft); max-width:560px;}
   .hero-loc{
-    margin-top:20px; display:inline-flex; gap:10px; flex-wrap:wrap;
+    margin-top:16px; display:inline-flex; gap:8px; flex-wrap:wrap;
   }
   .hero-loc span{
     font-size:13.5px; font-weight:600;
-    background:var(--soft); padding:7px 16px; border-radius:100px;
+    background:var(--soft); padding:8px 16px; border-radius:100px;
   }
 
-  .section-head{padding:70px 0 30px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;}
+  .section-head{padding:72px 0 32px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;}
   .section-head h2{font-family:'Fraunces', serif; font-weight:700; font-size:28px;}
 
   /* WORK ACCORDION */
@@ -86,20 +86,20 @@
   .work-summary .body{flex:1; min-width:0;}
   .work-summary .tag{font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
   .work-summary h3{font-family:'Fraunces', serif; font-weight:700; font-size:17px; margin-top:4px;}
-  .work-summary p{font-size:13.5px; color:var(--ink-soft); margin-top:6px;}
+  .work-summary p{font-size:13.5px; color:var(--ink-soft); margin-top:8px;}
   .chevron{font-size:20px; color:var(--ink-soft); transition:transform .2s ease; flex-shrink:0;}
   details[open] .chevron{transform:rotate(180deg); color:var(--coral);}
   .work-item--soon .thumb{opacity:0.55; filter:grayscale(0.3);}
   .work-item--soon h3{color:var(--ink-soft);}
   .soon-badge{
-    display:inline-block; margin-top:10px; font-size:11px; font-weight:700;
+    display:inline-block; margin-top:8px; font-size:11px; font-weight:700;
     text-transform:uppercase; letter-spacing:.05em; color:var(--dark);
-    background:var(--soft); padding:4px 10px; border-radius:100px;
+    background:var(--soft); padding:4px 8px; border-radius:100px;
   }
 
   .thumb{
     position:relative;
-    display:flex; align-items:center; justify-content:center; text-align:center; padding:0 10px;
+    display:flex; align-items:center; justify-content:center; text-align:center; padding:0 8px;
     font-family:'Fraunces', serif; font-weight:700; font-size:12px; color:var(--panel);
     overflow:hidden;
   }
@@ -118,16 +118,16 @@
   .thumb img.is-loaded ~ span.thumb-label{display:none;}
 
   .play-strip{
-    margin-top:16px; padding:34px 0 34px; border-top:2px dashed var(--line);
+    margin-top:16px; padding:32px 0 32px; border-top:2px dashed var(--line);
   }
-  .play-strip .label{font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);}
-  .play-chips{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;}
+  .play-strip .label{font-family:'Fraunces', serif; font-weight:700; font-size:28px; color:var(--ink);}
+  .play-chips{display:flex; gap:8px; margin-top:32px; flex-wrap:wrap;}
   .chip{
-    font-size:13.5px; font-weight:600; padding:9px 18px; border-radius:100px;
+    font-size:13.5px; font-weight:600; padding:8px 16px; border-radius:100px;
     border:1.5px solid var(--ink); background:var(--panel);
   }
   a.chip{
-    display:inline-flex; align-items:center; gap:6px;
+    display:inline-flex; align-items:center; gap:8px;
     cursor:pointer; transition:background .15s ease, transform .15s ease, border-color .15s ease;
   }
   a.chip:hover{transform:translateY(-2px);}
@@ -147,7 +147,11 @@
     background:#006D75; color:#fff; border-color:#006D75;
     animation:puck-slide .25s ease;
   }
-  .chip-gaming{cursor:pointer; user-select:none;}
+  .chip-gaming{
+    cursor:pointer; user-select:none;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .chip-gaming:hover{border-color:#7365B0; color:#7365B0;}
   @keyframes block-bump{
     0%{transform:translateY(0);}
     30%{transform:translateY(-8px);}
@@ -159,7 +163,7 @@
     background:var(--ink); color:var(--panel); border-color:var(--ink);
     font-family:'Press Start 2P', monospace;
     font-size:9.5px; letter-spacing:.02em; line-height:1.6;
-    padding:11px 16px;
+    padding:12px 16px;
   }
 
   /* CASE STUDY DETAIL (inside accordion) */
@@ -172,13 +176,13 @@
   .cs-block{margin-top:36px;}
   .cs-block h4{
     font-size:12.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700;
-    color:var(--coral); margin-bottom:10px;
+    color:var(--coral); margin-bottom:8px;
   }
   .cs-block p{font-size:16px; color:var(--ink); opacity:0.85; max-width:600px;}
-  .cs-block ul{margin-top:6px; padding-left:20px;}
+  .cs-block ul{margin-top:8px; padding-left:20px;}
   .cs-block li{font-size:16px; color:var(--ink); opacity:0.85; max-width:600px; margin-top:8px;}
   .cs-result{
-    margin-top:40px; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px 28px;
+    margin-top:40px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:24px 28px;
   }
   .cs-result .k{font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--coral); font-weight:700;}
   .cs-result .v{font-family:'Fraunces', serif; font-size:22px; margin-top:8px; color:var(--ink);}
@@ -201,6 +205,34 @@
     font-size:12.5px; font-weight:600; color:rgba(0,0,0,0.4);
   }
   .cs-image img.is-loaded ~ .cs-image-label{display:none;}
+  .cs-image:has(img.is-loaded){cursor:zoom-in;}
+
+  .lightbox{
+    display:none; position:fixed; inset:0; z-index:1000;
+    background:rgba(10,10,10,0.92);
+    align-items:center; justify-content:center;
+    padding:32px;
+  }
+  .lightbox.is-open{display:flex;}
+  .lightbox img{
+    max-width:100%; max-height:100%;
+    width:auto; height:auto;
+    border-radius:12px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+  }
+  .lightbox-close{
+    position:fixed; top:20px; right:24px;
+    width:44px; height:44px; border-radius:100px;
+    background:rgba(255,255,255,0.12); border:none; color:#fff;
+    font-size:22px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .15s ease;
+  }
+  .lightbox-close:hover{background:rgba(255,255,255,0.22);}
+  @media (max-width:640px){
+    .lightbox{padding:16px;}
+    .lightbox-close{top:12px; right:12px; width:40px; height:40px;}
+  }
 
   footer{padding:56px 0 80px; background:var(--dark); color:#fff;}
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:14px;}
@@ -231,7 +263,7 @@
   <div class="wrap">
     <h1>I <span class="word c1">design</span>, <span class="word c2">prototype</span>, and
     <span class="word c3">craft</span> with <span class="word c4">authenticity</span>.</h1>
-    <p class="hero-sub">Product Designer based in the San Francisco Bay Area with 10+ years of experience turning complex, often ambiguous systems, from decade-old enterprise platforms to brand-new AI-native tools, into experiences that make people's lives more delightful.</p>
+    <p class="hero-sub">Product Designer with 10+ years turning complex, often ambiguous systems — decade-old enterprise platforms to brand-new AI-native tools — into experiences that make people's work a little more delightful.</p>
     <div class="hero-loc">
       <span>📍 San Francisco Bay Area</span>
     </div>
@@ -273,10 +305,10 @@
         <div class="cs-block">
           <h4>What I Did</h4>
           <ul>
-            <li>Reviewed how BOPIS was built across the eCommerce space to ground the design in existing patterns.</li>
-            <li>Developed a vision defining the key touchpoints and needs, then presented it back to Customer Success with research examples to validate direction.</li>
-            <li>Refined the vision based on feedback, incorporating how Customer Success and Support needed to handle individual customer stories.</li>
-            <li>Handed off the vision to another designer during a team reorg, who carried implementation forward.</li>
+            <li>Reviewed how BOPIS was built across the eCommerce space, not to copy existing patterns but to find where competitors converged. That convergence became the basis for what could safely be "generic."</li>
+            <li>Developed a vision defining the key touchpoints and needs, then validated it with Customer Success against real research examples before investing further, rather than designing in isolation and finding out later it didn't hold up.</li>
+            <li>Refined the vision based on that feedback, building in how Customer Success and Support needed to handle individual customer stories. The design had to work for the team supporting it, not just the shopper.</li>
+            <li>Defined the vision through to Store Locator/Selection and PLP/PDP, the components that ultimately shipped, before a team reorg moved execution to another designer.</li>
           </ul>
         </div>
         <div class="cs-block">
@@ -347,19 +379,58 @@
       </div>
     </details>
 
-    <div class="work-item work-item--soon">
-      <div class="work-summary work-summary--static">
+    <details class="work-item">
+      <summary class="work-summary">
         <div class="thumb t2">
-          <img src="images/developer-experience.jpg" alt="Developer Experience project thumbnail" onload="this.classList.add('is-loaded')">
-          <span class="thumb-label">Developer Experience</span>
+          <img src="images/provisions.jpg" alt="Provisions project thumbnail" onload="this.classList.add('is-loaded')">
+          <span class="thumb-label">Provisions</span>
         </div>
         <div class="body">
-          <span class="tag">Salesforce Commerce Cloud</span>
-          <h3>Developer Experience</h3>
-          <span class="soon-badge">Coming Soon</span>
+          <span class="tag">Personal Project</span>
+          <h3>Provisions</h3>
+          <p>Designed and built a fridge/pantry tracker from problem to shipped product, making the call to design for triage over data entry, and for behavior change over a waste tally.</p>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </summary>
+      <div class="work-detail">
+        <div class="cs-role">Designer &amp; Builder · Personal project, 2026 · Solo, end to end</div>
+
+        <a href="https://provisionsapp-demo.vercel.app/" target="_blank" rel="noopener" class="chip" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; cursor:pointer;">Try the live demo <span class="chip-arrow">↗</span></a>
+
+        <div class="cs-image">
+          <img src="images/provisions-hero.jpg" alt="Provisions hero image" onload="this.classList.add('is-loaded')">
+          <span class="cs-image-label">Drop images/provisions-hero.jpg in locally to fill this</span>
+        </div>
+
+        <div class="cs-block">
+          <h4>The Challenge</h4>
+          <p>I kept throwing away food I'd lost track of: cooked, forgotten, gone bad. Existing inventory apps didn't fit how my kitchen actually works: meat bought in bulk and split across freezer containers, items moving between raw and cooked states, nothing labeled the way an app expects. So instead of adapting to someone else's tool, I built something specific to how my family actually uses a kitchen. A naive "item + expiration date" model breaks down fast against that reality. The design challenge was holding our real mess without asking the user to do the modeling themselves.</p>
+        </div>
+        <div class="cs-block">
+          <h4>What I Did</h4>
+          <ul>
+            <li>Designed the entry and display model around a small set of states (raw/cooked, split quantities, freeform location) rather than a rigid schema, so messy real cases stayed fast to log.</li>
+            <li>Led the home screen with what needs attention today, sorted by urgency, instead of a flat inventory list. The priority was "what do I deal with right now," not a complete-looking dashboard.</li>
+            <li>Designed the stats view to surface specific, recurring waste patterns rather than just totals, aimed at changing purchasing decisions, not just reporting on them.</li>
+            <li>Added a recipe suggestion feature scoped to what's already in inventory, to close the loop between noticing what's about to expire and actually using it.</li>
+          </ul>
+        </div>
+        <div class="cs-block">
+          <h4>Reflection</h4>
+          <p>No PRD, no engineering constraints, no customer ask. I made every call myself, including what counted as MVP. Visually, I drew on the hand-painted signs that hung in my family's grocery store growing up, a way to bring my own history into something I built with today's skills. The harder design call wasn't the data model, though. It was resisting a more impressive-looking stats view in favor of one blunt, specific callout. It read as a step down in polish, but it's the version that's actually changed what we buy.</p>
+        </div>
+
+        <div class="cs-result">
+          <div class="k">Result</div>
+          <div class="v">Shipped and in daily use for the household it was built for. The waste-pattern callout has already made us more environmentally conscious about what we buy, saving money in the process.</div>
+        </div>
+
+        <div class="cs-image">
+          <img src="images/provisions-detail.jpg" alt="Provisions detail image" onload="this.classList.add('is-loaded')">
+          <span class="cs-image-label">Drop images/provisions-detail.jpg in locally to fill this</span>
         </div>
       </div>
-    </div>
+    </details>
 
   </div>
 
@@ -375,12 +446,17 @@
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Trevor Ezaki</div>
+    <div>© 2026 [Your Name]</div>
     <div class="flinks">
       <a href="https://linkedin.com/in/trevor-ezaki" target="_blank" rel="noopener">Say hello on LinkedIn →</a>
     </div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
 <script>
   (function(){
@@ -414,6 +490,39 @@
           });
         }
       });
+    });
+  })();
+
+  // Click-to-enlarge lightbox for case study images
+  (function(){
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var closeBtn = document.getElementById('lightboxClose');
+    if(!lightbox || !lightboxImg || !closeBtn) return;
+
+    function openLightbox(img){
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('is-open');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.cs-image img').forEach(function(img){
+      img.addEventListener('click', function(){
+        if(img.classList.contains('is-loaded')) openLightbox(img);
+      });
+    });
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){
+      if(e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
     });
   })();
 </script>
