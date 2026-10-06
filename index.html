@@ -245,6 +245,17 @@
     .work-summary .thumb{width:72px; height:72px;}
   }
   :focus-visible{outline:2px solid var(--coral); outline-offset:2px;}
+
+  /* PLAY CARDS (new; reuses existing tokens and .cs-image behavior) */
+  .play-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding-bottom:20px;}
+  .play-card{background:var(--panel); border:1px solid var(--line); border-radius:16px; overflow:hidden;}
+  .play-card .cs-image{margin-top:0; aspect-ratio:4/3; border:none; border-bottom:1px solid var(--line); border-radius:0;}
+  .play-card .pc-body{padding:20px 24px 24px;}
+  .play-card .tag{font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft);}
+  .play-card h3{font-family:'Fraunces', serif; font-weight:700; font-size:19px; margin-top:4px;}
+  .play-card p{font-size:15px; color:var(--ink); opacity:0.85; margin-top:8px;}
+  .play-card .meta{font-size:13.5px; color:var(--ink-soft); opacity:1; margin-top:12px;}
+  @media (max-width:640px){ .play-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -255,6 +266,7 @@
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#play">Play</a>
+      <a href="#life">Life</a>
     </div>
   </div>
 </nav>
@@ -286,7 +298,7 @@
         <div class="body">
           <span class="tag">Commerce Experience</span>
           <h3>PWA Kit BOPIS</h3>
-          <p>Turned one of our biggest per-customer custom builds into an out-of-the-box capability — recognized with the Commerce Cloud Q2 2025 UX All-Star award.</p>
+          <p>Defined how BOPIS could become an out-of-the-box capability instead of a costly custom build, shipping its core components and earning the Commerce Cloud Q2 2025 UX All-Star award.</p>
         </div>
         <span class="chevron" aria-hidden="true">⌄</span>
       </summary>
@@ -294,7 +306,7 @@
         <div class="cs-role">Design Lead · Salesforce Commerce Cloud, 2025</div>
 
         <div class="cs-image">
-          <img src="images/bopis-hero.jpg" alt="PWA Kit BOPIS hero image" onload="this.classList.add('is-loaded')">
+          <img src="images/bopis-hero.jpg" alt="Shipped PWA Kit screens: product listing, store locator, and product detail page with in-store pickup option" onload="this.classList.add('is-loaded')">
           <span class="cs-image-label">Drop images/bopis-hero.jpg in locally to fill this</span>
         </div>
 
@@ -307,6 +319,16 @@
           <ul>
             <li>Reviewed how BOPIS was built across the eCommerce space, not to copy existing patterns but to find where competitors converged. That convergence became the basis for what could safely be "generic."</li>
             <li>Developed a vision defining the key touchpoints and needs, then validated it with Customer Success against real research examples before investing further, rather than designing in isolation and finding out later it didn't hold up.</li>
+          </ul>
+        </div>
+
+        <div class="cs-image">
+          <img src="images/bopis-flow.jpg" alt="BOPIS shopper flow mapping the key touchpoints from browsing to in-store pickup" onload="this.classList.add('is-loaded')">
+          <span class="cs-image-label">Drop images/bopis-flow.jpg in locally to fill this</span>
+        </div>
+
+        <div class="cs-block">
+          <ul>
             <li>Refined the vision based on that feedback, building in how Customer Success and Support needed to handle individual customer stories. The design had to work for the team supporting it, not just the shopper.</li>
             <li>Defined the vision through to Store Locator/Selection and PLP/PDP, the components that ultimately shipped, before a team reorg moved execution to another designer.</li>
           </ul>
@@ -318,11 +340,11 @@
 
         <div class="cs-result">
           <div class="k">Result</div>
-          <div class="v">Delivered Store Locator/Selection and PLP/PDP impact as core BOPIS components; recognized with the Commerce Cloud Q2 2025 UX All-Star award.</div>
+          <div class="v">Store Locator/Selection and PLP/PDP shipped as the core BOPIS components, part of broader PWA Kit work that contributed to a +29 point NPS improvement over two years. Recognized with the Commerce Cloud Q2 2025 UX All-Star award.</div>
         </div>
 
         <div class="cs-image">
-          <img src="images/bopis-detail.jpg" alt="PWA Kit BOPIS detail image" onload="this.classList.add('is-loaded')">
+          <img src="images/bopis-detail.jpg" alt="The same snow shovel product page across three stores: in stock in Boston, limited in a third city, unavailable in Los Angeles" onload="this.classList.add('is-loaded')">
           <span class="cs-image-label">Drop images/bopis-detail.jpg in locally to fill this</span>
         </div>
       </div>
@@ -356,8 +378,18 @@
         <div class="cs-block">
           <h4>What I Did</h4>
           <ul>
-            <li>Took in the product ask and produced low-fidelity concepts of several potential patterns, including private options behind a popup, radio-button-driven progressive disclosure, and read-only states.</li>
-            <li>Defined key patterns with the lead designer overseeing overall pattern transition across the product, translating concepts into Lightning components consistent with Commerce Cloud's system.</li>
+            <li>Explored ten low-fidelity concepts for the product ask, including private options behind a popup, radio-button-driven progressive disclosure, and read-only states. Three variants are shown below: one fitting within the parameters of the PRD, one broken out into sections, and one with advanced settings collapsed.</li>
+          </ul>
+        </div>
+
+        <div class="cs-image">
+          <img src="images/hybrid-auth-concepts.jpg" alt="Three low-fidelity variants for the Hybrid Authentication Settings page: fitting within the PRD, broken out into sections, and advanced settings collapsed" onload="this.classList.add('is-loaded')">
+          <span class="cs-image-label">Drop images/hybrid-auth-concepts.jpg in locally to fill this</span>
+        </div>
+
+        <div class="cs-block">
+          <ul>
+            <li>Defined key patterns with the lead designer overseeing the pattern transition across the product, translating concepts into Lightning components consistent with Commerce Cloud's system.</li>
             <li>Synced with the Content Experience team for cross-team consistency.</li>
             <li>Built in Figma and iterated with engineering as they uncovered constraints migrating functionality to the new tech stack.</li>
           </ul>
@@ -434,8 +466,45 @@
 
   </div>
 
-  <div id="play" class="play-strip">
-    <div class="label">Play</div>
+</section>
+
+<section id="play" class="wrap">
+  <div class="section-head">
+    <h2>Play</h2>
+  </div>
+
+  <div class="play-grid">
+    <article class="play-card">
+      <div class="cs-image">
+        <img src="images/play-uniform.jpg" alt="Grand Rapids Griffins uniform designed for the global contest, worn during a 2015 game" onload="this.classList.add('is-loaded')">
+        <span class="cs-image-label">Drop images/play-uniform.jpg in locally to fill this</span>
+      </div>
+      <div class="pc-body">
+        <span class="tag">Visual Design</span>
+        <h3>Grand Rapids Griffins Uniform</h3>
+        <p>Won a global design contest to create an official uniform for the Grand Rapids Griffins, the AHL affiliate of the Detroit Red Wings. I saw the team as representing all of Michigan, so the design tells the state's story: a crest inspired by medieval tapestries, championship markers borrowed from soccer jerseys to honor the team's recent Calder Cup win, and elements of the state motto woven in.</p>
+        <p class="meta">Contest 2014 · Worn during the 2015 season</p>
+      </div>
+    </article>
+
+    <article class="play-card">
+      <div class="cs-image">
+        <img src="images/play-logo.jpg" alt="Dallas Heroes Project logo, inspired by the Dallas city flag" onload="this.classList.add('is-loaded')">
+        <span class="cs-image-label">Drop images/play-logo.jpg in locally to fill this</span>
+      </div>
+      <div class="pc-body">
+        <span class="tag">Brand Identity</span>
+        <h3>Dallas Heroes Project Logo</h3>
+        <p>I'm not from Dallas, so the goal was a mark that felt like it belonged to the community it serves. I took my cue from the Dallas city flag, so the logo would feel rooted in the city.</p>
+        <p class="meta">2016</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="life" class="wrap">
+  <div class="play-strip">
+    <div class="label">Life</div>
     <div class="play-chips">
       <a href="https://open.spotify.com/playlist/00nMeQ0FhSsgzI44jnIjsF?si=bJ34EXJASzyBcLUjgcIchA" class="chip chip-music">🎵 Music <span class="chip-arrow">↗</span></a>
       <span class="chip chip-hockey" id="hockeyChip" data-default="🏒 Hockey" data-revealed="Stick Specs: P28, Flex: 65">🏒 Hockey</span>
